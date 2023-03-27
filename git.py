@@ -1,6 +1,11 @@
 import os
 import filecmp
 
+"""Changes"""
+"""The names should be descriptive and concise, also they should follow a uniformly conventions"""
+"""Bloaters - Instead of using nested if statements, I use guard classes to simplify the code. so I created a set of classes that each have a single responsibility to validate one of the conditions."""
+"""Simplified the commit function by using the all function to check if all file paths exist, instead of using a for loop"""
+
 
 def do_command(command, pathSpecs, filePaths, pathsToShowLogFor, versions, message):
     """
@@ -45,17 +50,16 @@ def do_command(command, pathSpecs, filePaths, pathsToShowLogFor, versions, messa
         return f"{command} is not supported by git"
 
 
-def status(pathSpecs):
+def status(file_path_patterns):
     return f"Status for: {', '.join(pathSpecs)}"
 
 
-def commit(filePaths, message):
+def commit(file_paths, message):
     if not message:
         return "Please enter a commit message"
-    for path in filePaths:
-        if not os.path.exists(path):
-            raise ValueError(f"{path} is not a valid file path")
-    return f"Committed: {', '.join(filePaths)}"
+    if not all(os.path.exists(path) for path in file_paths):
+        raise ValueError("One or more file paths are not valid")
+    return f"Committed: {', '.join(file_paths)}"
 
 
 def log(pathsToShowLogFor):

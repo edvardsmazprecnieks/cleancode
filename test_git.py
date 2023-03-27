@@ -2,8 +2,9 @@ import unittest
 import os
 from git import do_command
 
+"""Changes"""
 """Changed the comments into doc strings and made them more concise"""
-"""Function and variable names should be descriptive and follow the naming conventions, so I changed them"""
+"""Function and variable names should be descriptive and follow the naming conventions, also they should be consistent, so I changed them"""
 
 
 def test_commit_with_invalid_file_paths():
