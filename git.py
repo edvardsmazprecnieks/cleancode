@@ -2,7 +2,7 @@ import os
 import filecmp
 
 """Changes"""
-"""The names should be descriptive and concise, also they should follow a uniformly conventions"""
+"""The names should be descriptive and concise, also they should follow uniformly conventions"""
 """Bloaters - Instead of using nested if statements, I use guard classes to simplify the code. so I created a set of classes that each have a single responsibility to validate one of the conditions."""
 """Simplified the commit function by using the all function to check if all file paths exist, instead of using a for loop"""
 
