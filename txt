@@ -1,8 +1,8 @@
 Changes in the code and, if identified, the fitting bad smells
 
 
-Names should be descriptive and concise, also they should follow uniformly conventions
+Step 1: Names should be descriptive and concise, also they should follow uniformly conventions
 
-Bloaters - Instead of using nested if statements, I use guard classes to simplify the code. so I created a set of classes that each have a single responsibility to validate one of the conditions.
+Step 2: Bloaters - Instead of using nested if statements, I use guard classes to simplify the code. so I created a set of classes that each have a single responsibility to validate one of the conditions.
 
-Bloaters - Long Method - Simplified the commit function by using the all function to check if all file paths exist, instead of using a for loop
+Step 3: Bloaters - Long Method - Simplified the commit function by using the all function to check if all file paths exist, instead of using a for loop
