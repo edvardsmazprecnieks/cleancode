@@ -1,12 +1,6 @@
 import os
 import filecmp
 
-"""Changes"""
-"""The names should be descriptive and concise, also they should follow uniformly conventions"""
-"""Bloaters - Instead of using nested if statements, I use guard classes to simplify the code. so I created a set of classes that each have a single responsibility to validate one of the conditions."""
-"""Simplified the commit function by using the all function to check if all file paths exist, instead of using a for loop"""
-
-
 def do_command(command, pathSpecs, filePaths, pathsToShowLogFor, versions, message):
     """
     Executes the specified Git command with the given arguments.
@@ -74,5 +68,4 @@ def diff(file1, file2):
     # Compare two files using filecmp
     if filecmp.cmp(file1, file2):
         return "Files are identical"
-    else:
-        return "Files are different"
+    return "Files are different"

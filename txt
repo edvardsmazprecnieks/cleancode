@@ -1,3 +1,5 @@
+Changes in the code and, if identified, the fitting bad smells
+
 
 Names should be descriptive and concise, also they should follow uniformly conventions
 
